@@ -207,3 +207,215 @@ ChatGPT는 프로젝트를 대신 작성하는 용도가 아니라 이해가 부
 \- GitHub 오픈소스 모스부호 번역기 예제(기능 구성 아이디어 참고): [https://github.com/SeunMatt/morsecodetranslator](https://github.com/SeunMatt/morsecodetranslator)<br>
 \- GitHub Java Swing 모스부호 번역기 예제(Swing 화면 구성 방식 참고): [https://github.com/hariperisetla/Morsify](https://github.com/hariperisetla/Morsify)<br>
 \- GitHub Java 모스부호 변환 예제(모스부호 변환 자료구조 참고): [https://github.com/nimshafernando/Morse-Code-Translator-with-Binary-Tree](https://github.com/nimshafernando/Morse-Code-Translator-with-Binary-Tree)<br>
+
+---
+
+# morse_code(Morse_Code_Translator)
+
+## Project Introduction
+
+For this Java Programming final project, I created a Morse code translator using Java Swing.
+
+While considering project topics, I thought it would be interesting to input Morse code using the keyboard's spacebar, so I chose this topic.
+
+Users can input dots (.) and dashes (-) by pressing the spacebar briefly or holding it down, and the input Morse code can be converted into alphabets and numbers.
+
+## Project Goals
+
+Through this project, the goal was to directly implement the following:
+
+\- Java Swing GUI configuration<br>
+\- Button event handling<br>
+\- Keyboard input processing using KeyListener<br>
+\- Data conversion using HashMap<br>
+\- Thread utilization<br>
+\- Application of concepts learned in class
+
+## Class Content Used
+
+### Chapter 11 Swing Components
+
+The following components were used to create the program screen.
+
+\- JFrame<br>
+\- JPanel<br>
+\- JLabel<br>
+\- JButton<br>
+\- JTextArea<br>
+\- JScrollPane
+
+Additionally, the screen layout was arranged using BorderLayout and GridLayout.
+The user interface was constructed by separating the program's input area, result output area, and button area.
+
+### Chapter 13 Thread
+
+Threads were used to implement a reading effect function that displays the converted results one character at a time sequentially.
+By using threads, the implementation was designed to ensure the program operates without freezing.
+
+### Chapter 14 Menu and Action Events
+
+The following was used to create the program's top menu.
+
+\- JMenuBar<br>
+\- JMenu<br>
+\- JMenuItem<br>
+\- ActionListener
+
+Additionally, ActionListeners were utilized to handle button click events and menu events.
+
+### Application of Event Handling
+
+The core function of the project, Morse code input, was implemented by applying the concept of event handling.
+Using a KeyListener, the moment the user presses and releases the spacebar was detected, and through this, the input pattern was analyzed to distinguish between the dot (.) and the dash (-).
+I was able to apply the event handling concepts learned in class to actual program functions.
+
+## Main Functions
+
+### 1. Spacebar Input
+
+Morse code can be entered using the spacebar.
+
+\- Short press: Dot (.)<br>
+\- Long press: Dash (-)
+
+Input was processed using a KeyListener.
+
+### 2. Morse Code Conversion
+
+Morse code was converted into characters using a HashMap.
+
+Example:
+
+.-    -> A<br>
+-...  -> B<br>
+...   -> S<br>
+---   -> O
+
+The input Morse code is analyzed and converted into a string.
+
+### 3. Button Function
+
+The program implements the following buttons.
+
+\- Start Input<br>
+\- Next Character<br>
+\- Convert<br>
+\- Read Effect<br>
+\- Clear One<br>
+\- Reset
+
+Each button is implemented to operate using an ActionListener.
+
+### 4. Menu Function
+
+The following functions are implemented using the Help menu.
+
+\- View Morse Code Table<br>
+\- View Usage Instructions
+
+### 5. Read Effect
+
+The program is implemented to display the converted sentence one character at a time sequentially using a Thread.
+
+## Execution Example
+
+### SOS
+
+Input:
+
+... --- ...
+
+Result:
+
+SOS
+
+### HELLO
+
+Input:
+
+.... . .-.. .-.. ---
+
+Result:
+
+HELLO
+
+## Difficulties Encountered During Implementation
+
+Initially, I thought the project would be easily completed simply by creating buttons, but upon actual implementation, I found there were more difficult parts than I had anticipated.
+
+The most challenging aspect was the Morse code input function. Since Morse code requires distinguishing between dots (.) and dashes (-), I spent time considering how to handle user input.
+
+Based on the event handling concepts learned from the lecture materials, I implemented keyboard input detection using a KeyListener.
+Understanding exactly when the keyPressed and keyReleased events occur was particularly difficult, but I was able to implement the input process after multiple tests.
+
+Additionally, I encountered a problem where keyboard input did not work after clicking a button. I realized that the focus of the input area shifts, and fixing this allowed me to better understand Swing event handling methods.
+
+Regarding Morse code conversion using a HashMap, I initially considered using multiple conditional statements, but I discovered that utilizing a HashMap allowed for a simpler implementation.
+
+## Additional Learning
+
+This project was implemented based on Swing components, Action events, and Threads, which were covered in the lecture materials.
+
+However, to implement Morse code input, the core function of the project, additional learning was required regarding certain Java features not included in the lecture materials.
+In particular, the following additional topics were learned and applied to the project:
+
+\- Handling keyboard input using KeyListener<br>
+\- Implementing events using KeyAdapter<br>
+\- Detecting specific key inputs using KeyEvent<br>
+\- Controlling input focus using requestFocus()<br>
+\- Checking event timing using System.currentTimeMillis()
+
+These features are provided by the basic Java library, and I learned them while applying the event handling concepts learned in class to an actual program.
+
+Initially, I only understood button event handling, but as I proceeded with the project, I was able to study keyboard input events and focus concepts as well. Through this, I gained a deeper understanding of how programs that process user input operate.
+
+## Application of AI (LLM)
+
+The project was conducted based on the lecture materials.
+However, since there were parts that were difficult to implement immediately just by reading the lecture materials, I studied by referring to ChatGPT.
+
+In particular, I asked questions regarding the following topics:
+
+\- How does KeyListener work?<br>
+\- What is the difference between keyPressed and keyReleased?<br>
+\- How is spacebar input handled?<br>
+\- How is HashMap used?<br>
+\- How is ActionListener connected?<br>
+\- When is Thread used?<br>
+\- How is a Swing screen structured?
+
+I referred to conceptual explanations and simple examples through ChatGPT, and proceeded with the project by writing and modifying code based on this foundation.
+
+Initially, I was unfamiliar with Swing screen structure, so I learned by asking questions about the placement of JLabels, JPanels, and JTextAreas, as well as how to write user guide messages.
+I also utilized ChatGPT to resolve errors and implementation difficulties that arose during the project, and ultimately, I personally performed the program's functional configuration, class design, code writing, and testing processes.
+
+I utilized ChatGPT not to write the project on my behalf, but as a learning tool to supplement areas where I lacked understanding.
+
+## Reflections
+
+Through this project, I was able to experience firsthand how the concepts learned in class are applied in actual programs.
+
+In particular, directly using components such as ActionListener, KeyListener, HashMap, and Thread allowed me to better understand the concepts learned in the lectures.
+
+Although there were many difficult parts at first, I felt that my programming skills improved slightly as I personally fixed errors and implemented features.
+
+Furthermore, I was able to solve problems by using ChatGPT for additional study on parts that were difficult to understand solely from the lecture materials. Through this, I also experienced how to learn new content independently.
+
+If given the opportunity, I would like to add features such as actual voice output or Korean text conversion in the future.
+
+## Development Environment
+
+\- Java(v.25)<br>
+\- IntelliJ IDEA<br>
+\- Java Swing<br>
+
+## References
+
+\- Java Programming Lecture Materials Chapter 11 Swing Components<br>
+\- Java Programming Lecture Materials Chapter 13 Thread<br>
+\- Java Programming Lecture Materials Chapter 14 Menu and Action Events<br>
+\- International Morse Code Table<br>
+\- ChatGPT (Reference for concept learning and troubleshooting)<br>
+\- GitHub Open Source Morse Code Translator Example (Reference for feature configuration ideas): [https://github.com/SeunMatt/morsecodetranslator](https://github.com/SeunMatt/morsecodetranslator)<br>
+\- GitHub Java Swing Morse Code Translator Example (Reference for Swing screen layout): [https://github.com/hariperisetla/Morsify](https://github.com/hariperisetla/Morsify)<br>
+\- GitHub Java Morse Code Translator Example (Reference for Morse code conversion data structure): [https://github.com/nimshafernando/Morse-Code-Translator-with-Binary-Tree](https://github.com/nimshafernando/Morse-Code-Translator-with-Binary-Tree)<br>
