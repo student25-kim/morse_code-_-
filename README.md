@@ -204,6 +204,6 @@ ChatGPT는 프로젝트를 대신 작성하는 용도가 아니라 이해가 부
 \- 자바 프로그래밍 강의자료 14장 메뉴와 Action 이벤트<br>
 \- 국제 모스부호 표<br>
 \- ChatGPT(개념 학습 및 오류 해결 참고)<br>
-\- GitHub 오픈소스 모스부호 번역기 예제(아이디어 및 코드 수정 방향 참고): [https://github.com/SeunMatt/morsecodetranslator](https://github.com/SeunMatt/morsecodetranslator)<br>
-\- GitHub Java Swing 모스부호 번역기 예제(화면 구성과 변환 기능 참고): [https://github.com/hariperisetla/Morsify](https://github.com/hariperisetla/Morsify)<br>
-\- GitHub Java 모스부호 변환 예제(변환 로직 구현 방식 참고): [https://github.com/nimshafernando/Morse-Code-Translator-with-Binary-Tree](https://github.com/nimshafernando/Morse-Code-Translator-with-Binary-Tree)<br>
+\- GitHub 오픈소스 모스부호 번역기 예제(기능 구성 아이디어 참고): [https://github.com/SeunMatt/morsecodetranslator](https://github.com/SeunMatt/morsecodetranslator)<br>
+\- GitHub Java Swing 모스부호 번역기 예제(Swing 화면 구성 방식 참고): [https://github.com/hariperisetla/Morsify](https://github.com/hariperisetla/Morsify)<br>
+\- GitHub Java 모스부호 변환 예제(모스부호 변환 자료구조 참고): [https://github.com/nimshafernando/Morse-Code-Translator-with-Binary-Tree](https://github.com/nimshafernando/Morse-Code-Translator-with-Binary-Tree)<br>
